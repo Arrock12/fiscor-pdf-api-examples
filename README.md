@@ -15,6 +15,7 @@ Useful links:
 - API overview: https://pdf.fiscor.am/pdf-api
 - API documentation: https://pdf.fiscor.am/pdf-api/docs
 - Live examples page: https://pdf.fiscor.am/pdf-api/examples
+- GitHub repository: https://github.com/Arrock12/fiscor-pdf-api-examples
 - Operations discovery: https://pdf.fiscor.am/api/v1/operations
 
 Suggested GitHub topics:
