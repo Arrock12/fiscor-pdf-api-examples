@@ -1,0 +1,12 @@
+bin/
+obj/
+node_modules/
+.env
+.env.*
+*.pdf
+*.docx
+*.xlsx
+*.jpg
+*.jpeg
+*.png
+output.*

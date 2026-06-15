@@ -1,0 +1,221 @@
+{
+  "info": {
+    "_postman_id": "3fdf81dd-7d74-41d1-99af-fiscor-pdf-api",
+    "name": "Fiscor PDF API",
+    "description": "Create asynchronous PDF and document processing jobs with the Fiscor PDF API. Docs: https://pdf.fiscor.am/pdf-api/docs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{apiKey}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://pdf.fiscor.am/api/v1"
+    }
+  ],
+  "item": [
+    {
+      "name": "Discovery",
+      "item": [
+        {
+          "name": "List operations",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/operations",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "operations"
+              ]
+            },
+            "description": "Returns supported operation slugs and metadata."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Jobs",
+      "item": [
+        {
+          "name": "Create PDF to Word job",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code === 202) {",
+                  "  const body = pm.response.json();",
+                  "  if (body.jobId) pm.environment.set('jobId', body.jobId);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/jobs/pdf-to-word",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jobs",
+                "pdf-to-word"
+              ]
+            },
+            "description": "Upload a PDF and create an async PDF to Word conversion job. Select a local PDF file in the form-data file field before sending."
+          }
+        },
+        {
+          "name": "Create merge PDF job",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code === 202) {",
+                  "  const body = pm.response.json();",
+                  "  if (body.jobId) pm.environment.set('jobId', body.jobId);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "files",
+                  "type": "file",
+                  "src": []
+                },
+                {
+                  "key": "files",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/jobs/merge-pdf",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jobs",
+                "merge-pdf"
+              ]
+            },
+            "description": "Upload at least two PDF files and create a merge job."
+          }
+        },
+        {
+          "name": "Create compress PDF job",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (pm.response.code === 202) {",
+                  "  const body = pm.response.json();",
+                  "  if (body.jobId) pm.environment.set('jobId', body.jobId);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{baseUrl}}/jobs/compress-pdf",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jobs",
+                "compress-pdf"
+              ]
+            },
+            "description": "Upload a PDF and create a compression job."
+          }
+        },
+        {
+          "name": "Get job status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/jobs/{{jobId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jobs",
+                "{{jobId}}"
+              ]
+            },
+            "description": "Poll job status until it reaches Completed or Failed."
+          }
+        },
+        {
+          "name": "Download job result",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/jobs/{{jobId}}/download",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "jobs",
+                "{{jobId}}",
+                "download"
+              ]
+            },
+            "description": "Download the processed result after the job status is Completed."
+          }
+        }
+      ]
+    }
+  ]
+}
