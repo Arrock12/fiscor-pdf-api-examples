@@ -16,6 +16,7 @@ Useful links:
 - API documentation: https://pdf.fiscor.am/pdf-api/docs
 - Live examples page: https://pdf.fiscor.am/pdf-api/examples
 - GitHub repository: https://github.com/Arrock12/fiscor-pdf-api-examples
+- OpenAPI specification: https://pdf.fiscor.am/openapi.json
 - Operations discovery: https://pdf.fiscor.am/api/v1/operations
 
 Suggested GitHub topics:
@@ -68,6 +69,7 @@ curl "$FISCOR_PDF_BASE_URL/operations" \
 - [JavaScript fetch example](./javascript/fiscor-pdf-api-example.js)
 - [Postman collection](./postman/fiscor-pdf-api.postman_collection.json)
 - [Postman environment](./postman/fiscor-pdf-api.postman_environment.json)
+- [OpenAPI specification](./openapi.json)
 
 ## Common operation slugs
 
