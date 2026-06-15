@@ -1,8 +1,8 @@
 # Fiscor PDF API Examples
 
-Ready-to-use examples for integrating the Fiscor PDF API into web apps, SaaS products, back-office systems, and automation workflows.
+Official examples for integrating the Fiscor PDF Tools API into web apps, SaaS products, back-office systems, and automation workflows.
 
-Use the API to convert, merge, split, compress, OCR, watermark, protect, unlock, and export PDF files without running document processing infrastructure yourself.
+Use the API to convert PDF to Word, convert Word to PDF, convert PDF to JPG, convert JPG to PDF, merge PDF files, split PDF files, compress PDF files, OCR documents, watermark PDFs, protect PDFs, unlock PDFs, and export document data without running document processing infrastructure yourself.
 
 Base URL:
 
@@ -12,12 +12,48 @@ https://pdf.fiscor.am/api/v1
 
 Useful links:
 
+- Official website: https://pdf.fiscor.am/
 - API overview: https://pdf.fiscor.am/pdf-api
 - API documentation: https://pdf.fiscor.am/pdf-api/docs
 - Live examples page: https://pdf.fiscor.am/pdf-api/examples
 - GitHub repository: https://github.com/Arrock12/fiscor-pdf-api-examples
 - OpenAPI specification: https://pdf.fiscor.am/openapi.json
+- Downloadable OpenAPI specification: https://pdf.fiscor.am/downloads/fiscor-pdf-api.openapi.json
+- Postman collection: https://pdf.fiscor.am/downloads/fiscor-pdf-api.postman_collection.json
 - Operations discovery: https://pdf.fiscor.am/api/v1/operations
+- AI overview: https://pdf.fiscor.am/ai-overview
+- LLM summary: https://pdf.fiscor.am/llms.txt
+- Full LLM reference: https://pdf.fiscor.am/llms-full.txt
+- Sitemap: https://pdf.fiscor.am/sitemap.xml
+
+Official tool pages:
+
+- PDF to Word: https://pdf.fiscor.am/pdf-to-word
+- Word to PDF: https://pdf.fiscor.am/word-to-pdf
+- PDF to JPG: https://pdf.fiscor.am/pdf-to-jpg
+- JPG to PDF: https://pdf.fiscor.am/jpg-to-pdf
+- Compress PDF: https://pdf.fiscor.am/compress-pdf
+
+Search and AI discovery keywords:
+
+```txt
+Fiscor PDF API
+Fiscor PDF Tools API
+PDF API
+PDF conversion API
+PDF to Word API
+Word to PDF API
+PDF to JPG API
+JPG to PDF API
+Compress PDF API
+Merge PDF API
+Split PDF API
+PDF OCR API
+document automation API
+online PDF tools API
+OpenAPI PDF converter
+Postman PDF API collection
+```
 
 Suggested GitHub topics:
 
